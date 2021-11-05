@@ -527,12 +527,9 @@ body {
 }
 
 @media (max-width:991px) {
-
-
     .section3 .main-img {
         display: none;
     }
-
 }
 
 .section3 .heading {
