@@ -1340,6 +1340,20 @@ body {
     z-index: -1;
 }
 
+
+.section4 .tips .tip:first-of-type::after {
+    position: absolute;
+    content: "";
+    background-color: var(--main-color);
+    width: 45%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    height: 1.5rem;
+    top: -2rem;
+    right: -0.4rem;
+    z-index: -1;
+}
+
 .section4 .tips h4 {
     display: inline-block;
     width: 100%;
@@ -1365,5 +1379,38 @@ body {
     margin: 0;
     padding: 0;
 }
+
+@media (max-width:991px) {
+    .section4 .tips {
+        flex-direction: column;
+    }
+
+    .section4 .tips .tip {
+        width: 100%;
+    }
+
+    .section4 .tips .tip1 {
+        margin: 4rem 0 5rem;
+    }
+
+    .section4 .tips .tip2 {
+        margin: 2rem 0 2rem;
+    }
+
+    .section4 .tips .tip2 h3 {
+        margin: 4rem auto 2rem;
+    }
+
+    .section4 .tips .tip:first-of-type::after {
+        width: 45%;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        height: 1.5rem;
+        top: -2rem;
+        right: 7.3rem;
+        z-index: -1;
+    }
+}
+
 
 /* End Section 4  */
