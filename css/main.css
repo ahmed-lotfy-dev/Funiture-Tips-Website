@@ -47,11 +47,22 @@ body {
     font-family: "baskervi", sans-serif;
 }
 
-.container {
+header .container {
     width: 80vw;
     margin: 0 auto;
+    position: relative;
 }
 
+header .container::after {
+    content: "";
+    position: absolute;
+    background: url(../images/right-texture.png) no-repeat center center;
+    width: 100%;
+    height: 45%;
+    right: -36%;
+    bottom: -30%;
+    z-index: -1;
+}
 
 /* heading start */
 .container .heading {
@@ -1284,6 +1295,7 @@ body {
 /* Start Section 4  */
 .section4 {
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 80vw;
     padding-top: var(--padding-top);
@@ -1291,6 +1303,17 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+}
+
+.section4::after {
+    content: "";
+    position: absolute;
+    background: url(../images/right-texture.png) no-repeat center center;
+    width: 100%;
+    height: 100%;
+    right: -50%;
+    bottom: -20%;
+    z-index: -1;
 }
 
 .section4 h2 {
@@ -1412,5 +1435,13 @@ body {
     }
 }
 
-
 /* End Section 4  */
+
+
+/* Start Section 5  */
+
+
+
+
+
+/* End Section 5  */
