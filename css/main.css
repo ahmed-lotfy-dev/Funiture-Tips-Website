@@ -1439,9 +1439,100 @@ body {
 
 
 /* Start Section 5  */
+.section5 {
+    display: flex;
+    position: relative;
+    width: 80vw;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: row;
+    padding-top: var(--padding-top);
+    padding-bottom: var(--padding-bottom);
+}
 
+.section5::after {
+    content: "";
+    position: absolute;
+    background: url(../images/section-5-right-shape.png) no-repeat center center;
+    width: 100%;
+    height: 50%;
+    bottom: -15%;
+    right: -35%;
+    z-index: -1;
+}
 
+.section5 .heading {
+    text-align: right;
+    padding-right: 1.5rem;
+}
 
+.section5 .heading h2 {
+    color: var(--main-color);
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 1.7rem;
+    padding-bottom: 2rem;
+}
 
+.section5 .heading p {
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    color: var(--text-color-dark);
+    width: 100%;
+    padding-bottom: 2rem;
 
-/* End Section 5  */
+}
+
+.section5 .heading h3 {
+    font-family: "black-jack-regular", sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--text-color-dark);
+    padding-top: 1rem;
+}
+
+.section5 .images {
+    flex-basis: 60%;
+}
+
+.section5 .images .images-container {
+    position: relative;
+}
+
+.section5 .images .images-container .img1 {
+    width: 100%;
+}
+
+.section5 .images .images-container::before {
+    content: "";
+    position: absolute;
+    background: url(../images/section-5-left-shape.png) no-repeat center center;
+    height: 100%;
+    width: 100%;
+    bottom: -13rem;
+    left: -13.5rem;
+}
+
+.section5 .images .images-container::after {
+    content: "";
+    position: absolute;
+    background: var(--main-color);
+    width: 2rem;
+    height: 35%;
+    top: 0.5rem;
+    right: 4rem;
+}
+
+.section5 .images .images-container img:last-of-type {
+    width: 35%;
+    position: absolute;
+    bottom: -6rem;
+    right: 12rem;
+
+    @media(max-width:787px) {
+        .section5 {
+            flex-wrap: wrap
+        }
+    }
+
+    /* End Section 5  */
