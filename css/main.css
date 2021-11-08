@@ -57,11 +57,12 @@ header .container::after {
     content: "";
     position: absolute;
     background: url(../images/right-texture.png) no-repeat center center;
-    width: 100%;
+    width: 50%;
     height: 45%;
-    right: -36%;
-    bottom: -30%;
+    right: -11%;
+    bottom: -44%;
     z-index: -1;
+    overflow: hidden;
 }
 
 /* heading start */
@@ -1309,10 +1310,12 @@ body {
     content: "";
     position: absolute;
     background: url(../images/right-texture.png) no-repeat center center;
-    width: 100%;
+    width: 50%;
     height: 100%;
-    right: -50%;
-    bottom: -20%;
+    right: -36%;
+    bottom: -25%;
+    overflow: hidden;
+    transform: translateX(-50%);
     z-index: -1;
 }
 
@@ -1374,6 +1377,7 @@ body {
     height: 1.5rem;
     top: -2rem;
     right: -0.4rem;
+    overflow: hidden;
     z-index: -1;
 }
 
@@ -1443,27 +1447,41 @@ body {
     display: flex;
     position: relative;
     width: 80vw;
-    justify-content: center;
-    margin: 0 auto;
-    flex-direction: row;
+    justify-content: space-between;
+    margin: 8rem auto 8rem;
     padding-top: var(--padding-top);
     padding-bottom: var(--padding-bottom);
+}
+
+@media (max-width:767px) {
+    .section5 {
+        flex-direction: column;
+    }
 }
 
 .section5::after {
     content: "";
     position: absolute;
     background: url(../images/section-5-right-shape.png) no-repeat center center;
-    width: 100%;
-    height: 50%;
-    bottom: -15%;
-    right: -35%;
+    width: 45%;
+    height: 0;
+    bottom: -13%;
+    right: -37%;
+    overflow: hidden;
+    transform: translateX(-57%);
     z-index: -1;
 }
 
 .section5 .heading {
     text-align: right;
-    padding-right: 1.5rem;
+    flex-basis: 30%;
+}
+
+@media (max-width:767px) {
+    .section5 .heading {
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 .section5 .heading h2 {
@@ -1472,6 +1490,12 @@ body {
     text-transform: capitalize;
     font-size: 1.7rem;
     padding-bottom: 2rem;
+}
+
+@media (max-width:767px) {
+    .section5 .heading h2 {
+        padding-bottom: 1rem;
+    }
 }
 
 .section5 .heading p {
@@ -1491,48 +1515,309 @@ body {
     padding-top: 1rem;
 }
 
+
+@media (max-width:767px) {
+    .section5 .heading h3 {
+        padding-top: 0.5rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
 .section5 .images {
-    flex-basis: 60%;
+    flex-basis: 70%;
+    position: relative;
 }
 
 .section5 .images .images-container {
     position: relative;
 }
 
-.section5 .images .images-container .img1 {
-    width: 100%;
-}
-
-.section5 .images .images-container::before {
-    content: "";
+.section5 .images .images-container .left-shape {
     position: absolute;
-    background: url(../images/section-5-left-shape.png) no-repeat center center;
-    height: 100%;
-    width: 100%;
-    bottom: -13rem;
-    left: -13.5rem;
+    width: 25%;
+    transform: translate(70%, 50%);
+    bottom: 0;
+    left: 0;
 }
 
-.section5 .images .images-container::after {
+.section5 .images .images-container .img1 {
+    margin: 0 auto;
+    width: 85%;
+    margin-left: 15%;
+}
+
+.section5 .images::after {
     content: "";
     position: absolute;
     background: var(--main-color);
-    width: 2rem;
+    width: 3%;
     height: 35%;
-    top: 0.5rem;
-    right: 4rem;
+    top: 1%;
+    right: -3%;
 }
 
 .section5 .images .images-container img:last-of-type {
     width: 35%;
+    margin: 0 auto;
     position: absolute;
-    bottom: -6rem;
-    right: 12rem;
+    bottom: 0;
+    right: 0;
+    transform: translate(-40%, 50%);
+    /* transform: translate(50%, -50%); */
+}
 
-    @media(max-width:787px) {
-        .section5 {
-            flex-wrap: wrap
-        }
+@media (max-width:767px) {
+    .section5 .images .images-container .img1 {
+        width: 100%;
+        margin-left: 0;
     }
 }
-    /* End Section 5  */
+
+/* End Section 5  */
+
+
+/* Start Section 6 */
+.section6 {
+    margin: 0rem auto;
+    width: 80vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/section-6-img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: var(--padding-bottom)
+}
+
+.section6 .heading {
+    width: 100%;
+    flex-basis: 30%;
+    padding: 3rem 0;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.section6 .heading h2 {
+    color: var(--main-color);
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+}
+
+.section6 .heading h2:last-child {
+    margin-top: 1rem;
+}
+
+.section6 .heading h2::first-letter {
+    text-transform: uppercase;
+}
+
+.section6 .sign-up {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem auto;
+    width: 100%;
+    flex-basis: 70%;
+    padding-bottom: 5rem;
+}
+
+.section6 .sign-up p {
+    margin: 0.8rem auto;
+    font-size: 0.7rem;
+    color: var(--text-color-dark);
+}
+
+.section6 form {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 4rem 3rem 1.5rem;
+    width: 35%;
+    margin: 6rem auto;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.section6 form input {
+    margin-top: 0.8rem;
+}
+
+.section6 form #event {
+    padding: 0.3rem;
+    color: var(--text-color-dark);
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    outline: 0;
+}
+
+.section6 form input[type="text"],
+.section6 form input[type="email"] {
+    padding: 0.3rem;
+    font-size: 0.6rem;
+}
+
+.section6 form input[type="text"]:focus,
+.section6 form input[type="email"]:focus {
+    outline: 0;
+}
+
+.section6 form input[type="text"]::placeholder,
+.section6 form input[type="email"]::placeholder {
+    padding-left: 0.3rem;
+    text-transform: uppercase;
+}
+
+.section6 form input[type="submit"] {
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    text-transform: uppercase;
+    padding: 0.3rem;
+    word-spacing: 0.2rem;
+}
+
+@media (max-width:767px) {
+    .section6 .sign-up form>p {
+        font-size: 0.6rem;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* End Section 6 */
+
+/* Start Section 7  */
+
+
+
+
+
+/* End Section 7  */
+
+/* Start Footer */
+
+.footer {
+    display: flex;
+    background-color: var(--text-color-light);
+    color: white;
+    width: 80vw;
+    margin: 0 auto;
+    font-family: "baskervi";
+    margin-top: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer .footer-nav {
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.footer .footer-nav ul {
+    list-style: none;
+}
+
+.footer .footer-nav ul li {
+    margin-top: 1rem;
+    font-weight: 400;
+}
+
+.footer .footer-nav ul:nth-of-type(2) li a {
+    font-weight: bold;
+}
+
+.footer .footer-nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer .sign-up {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex-basis: 33%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer .sign-up h3 {
+    font-weight: 400;
+
+}
+
+.footer .sign-up h3::first-letter {
+    text-transform: uppercase;
+}
+
+.footer .sign-up h3 {
+    inline-size: 35ch;
+    line-height: 1.4;
+    font-size: 1.1rem;
+}
+
+.footer .sign-up form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.footer .sign-up form input[type="email"] {
+    padding: 0.2rem;
+    width: 95%;
+    margin-bottom: 0.4rem;
+    /* margin: 0.3rem; */
+}
+
+.footer .sign-up form input[type="submit"] {
+    margin: 0 auto;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    color: white;
+    padding: 0.3rem 0;
+}
+
+.footer .sign-up p {
+    font-size: 0.6rem;
+    inline-size: 50ch;
+    font-weight: 400;
+}
+
+
+
+.footer .footer-logo {
+    flex-basis: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer .footer-logo h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: "baskervi";
+}
+
+.footer .footer-logo h2 {
+    font-size: 3rem;
+    align-self: center;
+}
+
+.footer .footer-logo h4 {
+    font-family: "black-jack-regular";
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* End Footer */
